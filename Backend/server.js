@@ -6,14 +6,19 @@ const app = express();
 const userRoutes = require("./routes/user");
 
 // CORS options configuration
-const corsOptions = {
-  origin: "http://localhost:5173",
-  methods: ["GET", "POST", "PUT"],
-  allowedHeaders: ["Content-Type"],
-};
+// const corsOptions = {
+//   origin: "http://localhost:5173",
+//   methods: ["GET", "POST", "PUT"],
+//   allowedHeaders: ["Content-Type"],
+// };
+// const corsOptions = {
+//   origin: true, // Allow all origins
+//   methods: ["GET", "POST", "PUT"],
+//   allowedHeaders: ["Content-Type"],
+// };
 
 // Apply CORS middleware
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
 // Define routes
